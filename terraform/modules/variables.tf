@@ -1,4 +1,4 @@
-variable "middle_earth" {
+variable "bucket_name" {
   type        = string
 }
 
