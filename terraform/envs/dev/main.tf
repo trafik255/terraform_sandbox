@@ -1,6 +1,11 @@
+resource "random_integer" "suffix" {
+  min = 10000
+  max = 99999
+}
+
 module "s3" {
-    source      = "../../modules/s3_bucket"
-    bucket_name = "var.bucket_name"
-    project     = "var.project_id"
-    owner = "var.owner"
+  source      = "../../modules/s3_bucket"
+  bucket_name = "dev-demo-${random_integer.suffix.result}"
+  project     = var.project
+  owner       = var.owner
 }

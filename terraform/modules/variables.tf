@@ -1,11 +1,11 @@
 variable "bucket_name" {
-  type        = string
+  type = string
 }
 
-variable "project_id" {
-  type        = string
+variable "project" {
+  type = string
 }
 
 variable "owner" {
-  type        = string
+  type = string
 }
